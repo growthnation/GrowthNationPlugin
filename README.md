@@ -63,6 +63,16 @@ Or follow your agent's skill installation instructions to install manually.
 
 ---
 
+## Optional: the GrowthNation connector
+
+Installing the plugin also makes the **GrowthNation MCP connector** (`https://app.growthnation.ai/mcp`) available — but the two skills never depend on it. They stay fully self-contained: `/proof-audit` and `/proof-meeting-prep` run for anyone with nothing but web search + fetch.
+
+The connector is a pure **add-on for GrowthNation users**: when it's connected, you can push results into your GrowthNation workspace (save discovered proof to the Customer Voice library, turn a meeting-prep brief into tailored Sparks, etc.) instead of just reading the markdown. Skip it and the skills lose nothing.
+
+Your agent prompts for consent before the connector runs, and GrowthNation features behind it require a logged-in account.
+
+---
+
 ## Usage
 
 **Proof Audit**
