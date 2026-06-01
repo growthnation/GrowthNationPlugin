@@ -1,6 +1,6 @@
 ---
 name: proof-audit
-description: Run a Proof Audit on a company's website — find their social proof (testimonials, case studies, reviews) and score how FRESH it is on a five-band freshness scale (Fresh → Expired), then recommend what to refresh. Use when someone gives a domain and wants to know whether the proof on their site is still credible or has gone stale. Self-contained: uses only web search + fetch.
+description: Run a Proof Audit on a company's website — find their social proof (testimonials, case studies, reviews) and score how FRESH it is on a five-band freshness scale (Fresh → Expired), then recommend what to refresh. Use when someone gives a domain and wants to know whether the proof on their site is still credible or has gone stale. Runs standalone on web search + fetch; scores against your GrowthNation library via MCP when connected.
 ---
 
 # Proof Audit
@@ -13,7 +13,17 @@ that proof, scores its freshness, and tells the operator exactly what to refresh
 Think **Rotten Tomatoes, but for social proof**: every piece sits somewhere between **Fresh** (recent,
 credible) and **Expired** (so old it hurts).
 
-You need only a **domain**. No login, no database, no special tools — just `WebSearch` and `WebFetch`.
+You need only a **domain** — it runs on `WebSearch` + `WebFetch` alone. When the GrowthNation MCP is connected and you're signed in on a plan, it also scores against the user's saved proof library (see Data source below).
+
+## Data source — resolve in this order
+
+Standalone by default; reach for the GrowthNation MCP only when it's connected and ready. Never block the audit on it.
+
+1. **MCP connected?** Look for GrowthNation MCP tools in this session (e.g. `get_credits`, `list_projects`, `list_testimonials`). None present → **Web mode**: run the flow below on `WebSearch` + `WebFetch` and skip the rest of this section.
+2. **Signed in + on a plan?** Call `get_credits` (it's free). "Authentication required" → **Web mode**. Tier `trial` or `pro` → **MCP-assisted mode**. Tier `freemium`/`onboarding` (no active plan) → the library tools are plan-gated, so stay in **Web mode** — you may note once that a trial or plan lets the audit score their saved library directly.
+3. **MCP-assisted mode** — if the audited domain is the user's own project (check `list_projects`), pull their stored proof with `list_testimonials`, `list_case_studies`, `list_stats`, `list_customers` and score THOSE alongside the live pages (the library carries cleaner dates than scraped HTML). For a third-party domain, optionally `research_company` to enrich, then audit via web as normal. If any MCP tool errors or returns nothing, fall back to web for that piece.
+
+The scoring rubric and output below are identical in both modes.
 
 ## What counts as "proof"
 
@@ -143,4 +153,4 @@ can rebuild the oldest pieces from fresh customer material."_
 
 - **Cheap by design.** Cap pages, prefer one good `WebFetch` per proof page over re-fetching. Don't crawl the whole site.
 - **No date ≠ stale.** Undated proof is _unknown_ (score 50, low confidence), not automatically expired — but flag that "buyers can't tell how old this is" as its own weakness.
-- **Self-contained.** Do not call any GrowthNation server, MCP, or database — this skill must run for anyone who installs it with nothing but web access.
+- **Standalone-first.** Runs for anyone with nothing but web access. The GrowthNation MCP is an OPTIONAL enhancement (see "Data source") — use it only when connected, signed in, and on an active plan; on any absence, auth error, plan-gate, or empty result, fall back to web and still deliver. Never hard-require the MCP.

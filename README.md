@@ -18,7 +18,7 @@ Two self-contained social-proof skills for B2B sales, in one plugin:
 | **`/proof-audit`** | Point it at a domain — it finds the social proof on the site (testimonials, case studies, reviews, logo walls, customer stats), scores how **fresh** each piece is on a five-band scale (🟢 **Fresh** → ⚫ **Expired**), and prints a worst-first audit with prioritised refresh recommendations. Stale proof reads as neglect and quietly kills deals; this tells you what to fix. |
 | **`/proof-meeting-prep`** | Give it the company, the people on the call, and what you're selling. It researches each person from public sources, works out what that role cares about and what they'll push back on, proposes the **single proof angle most likely to move them**, then reads the room (champion, buyer, gatekeeper, sequencing). |
 
-**Self-contained:** both skills use only the agent's built-in **web search + fetch**. No API keys, no database, no CRM, no login — anyone can install and run them.
+**Standalone by default:** both skills run on the agent's built-in **web search + fetch** — no API keys, no database, no CRM, no login, so anyone can install and run them. If the GrowthNation MCP connector is also installed and you're signed in, they use it for richer grounding and fall back to web otherwise (see [Optional: the GrowthNation connector](#optional-the-growthnation-connector)).
 
 ---
 
@@ -65,11 +65,11 @@ Or follow your agent's skill installation instructions to install manually.
 
 ## Optional: the GrowthNation connector
 
-Installing the plugin also makes the **GrowthNation MCP connector** (`https://app.growthnation.ai/mcp`) available — but the two skills never depend on it. They stay fully self-contained: `/proof-audit` and `/proof-meeting-prep` run for anyone with nothing but web search + fetch.
+Installing the plugin also makes the **GrowthNation MCP connector** (`https://app.growthnation.ai/mcp`) available — but the two skills never **depend** on it. They run standalone for anyone with nothing but web search + fetch.
 
-The connector is a pure **add-on for GrowthNation users**: when it's connected, you can push results into your GrowthNation workspace (save discovered proof to the Customer Voice library, turn a meeting-prep brief into tailored Sparks, etc.) instead of just reading the markdown. Skip it and the skills lose nothing.
+When the connector **is** present, each skill resolves its data in steps: it checks whether the MCP is connected and you're signed in (a free `get_credits` probe), and only then reaches for the richer tools — `/proof-audit` scores against your saved proof library, `/proof-meeting-prep` grounds each person's angle in your real customer evidence via `prepare_outreach`. On any absence — not connected, not signed in, or no active trial/plan (those tools are plan-gated) — it falls back to web and still delivers. The MCP is pure upside, never a requirement.
 
-Your agent prompts for consent before the connector runs, and GrowthNation features behind it require a logged-in account.
+Your agent prompts for consent before the connector runs, and the richer GrowthNation tools require a logged-in account on an active trial or plan.
 
 ---
 

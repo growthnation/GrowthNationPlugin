@@ -1,6 +1,6 @@
 ---
 name: proof-meeting-prep
-description: Walk into a B2B call knowing every person in the room. Give it the company, the people on the call, and what you're selling — it researches each stakeholder's role priorities and likely objections from public sources, then proposes the single proof angle that lands for each person, plus how to sequence the room. Use when someone has a live deal and a multi-stakeholder call coming up. Self-contained: uses only web search + fetch.
+description: Walk into a B2B call knowing every person in the room. Give it the company, the people on the call, and what you're selling — it researches each stakeholder's role priorities and likely objections from public sources, then proposes the single proof angle that lands for each person, plus how to sequence the room. Use when someone has a live deal and a multi-stakeholder call coming up. Runs standalone on web search + fetch; grounds in your GrowthNation customer proof via MCP when connected.
 ---
 
 # Proof Meeting Prep
@@ -15,8 +15,19 @@ Most reps walk into a multi-stakeholder call with one pitch for five different j
 engineer are in the same meeting hearing the same deck — and it lands for neither. This skill gives
 each person their own angle before the call starts.
 
-You need only a **company and a list of names + roles**. No login, no database, no CRM, no special
-tools — just `WebSearch` and `WebFetch`.
+You need only a **company and a list of names + roles** — it runs on `WebSearch` + `WebFetch` alone.
+When the GrowthNation MCP is connected and you're signed in on a plan, it grounds each person's proof
+angle in the user's REAL customer evidence instead of priors (see Data source below).
+
+## Data source — resolve in this order
+
+Standalone by default; reach for the GrowthNation MCP only when it's connected and ready. Never block the brief on it.
+
+1. **MCP connected?** Look for GrowthNation MCP tools in this session (e.g. `get_credits`, `prepare_outreach`, `list_stakeholders`). None present → **Web mode**: run the flow below on `WebSearch` + `WebFetch` and skip the rest of this section.
+2. **Signed in + on a plan?** Call `get_credits` (it's free). "Authentication required" → **Web mode**. Tier `trial` or `pro` → **MCP-assisted mode**. Tier `freemium`/`onboarding` (no active plan) → the grounding tools are plan-gated, so stay in **Web mode** — you may note once that a trial or plan grounds the brief in their real customer proof.
+3. **MCP-assisted mode** — for each person, call `prepare_outreach` (FREE grounding: returns ranked proof + the influence angle + the resolved role); pull `list_testimonials` / `list_stats` for the exact proof to cite, and `research_company` for the target. Resolve people/companies with `list_stakeholders` / `list_companies`. If any MCP tool errors or returns nothing, fall back to web for that piece.
+
+The brief format and the proof-angle taxonomy below are the same in both modes — MCP just supplies real customer proof where web mode reasons from priors.
 
 ## What you produce
 
@@ -124,4 +135,4 @@ real customer proof? A Proof Expert can build the room's set."_
 
 - **Cheap by design.** A few targeted searches per person and one good `WebFetch` per source beats crawling. Don't over-research a junior attendee.
 - **Unknown ≠ guess.** If you can't find a person, reason from their role and industry and mark it `[inferred]` — never fabricate a detail to look thorough.
-- **Self-contained.** Do not call any GrowthNation server, MCP, or database — this skill must run for anyone who installs it with nothing but web access.
+- **Standalone-first.** Runs for anyone with nothing but web access. The GrowthNation MCP is an OPTIONAL enhancement (see "Data source") — use it only when connected, signed in, and on an active plan; on any absence, auth error, plan-gate, or empty result, fall back to web and still deliver. Never hard-require the MCP.
