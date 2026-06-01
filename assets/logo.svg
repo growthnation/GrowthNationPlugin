@@ -1,0 +1,19 @@
+<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GrowthNation">
+  <style>
+    .tile { fill: #1A1A1A; }
+    .wm   { fill: #1A1A1A; }
+    .sub  { fill: #6B6B6B; }
+    @media (prefers-color-scheme: dark) {
+      .tile { fill: #262626; }
+      .wm   { fill: #EDEDED; }
+      .sub  { fill: #9A9A9A; }
+    }
+  </style>
+  <g transform="translate(8 8)">
+    <rect class="tile" width="48" height="48" rx="12"/>
+    <path d="M13 33 L21 25 L27 31 L36 17" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="36" cy="17" r="3.5" fill="#22C55E"/>
+  </g>
+  <text class="wm" x="68" y="33" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">GrowthNation</text>
+  <text class="sub" x="69" y="50" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="0.5">Proof Audit · Proof Meeting Prep</text>
+</svg>

@@ -1,0 +1,15 @@
+{
+  "name": "growthnation",
+  "owner": {
+    "name": "GrowthNation",
+    "email": "hello@growthnation.ai"
+  },
+  "plugins": [
+    {
+      "name": "growthnation",
+      "version": "1.0.0",
+      "description": "Two self-contained social-proof skills for B2B sales. Proof Audit (/proof-audit) scores how fresh a company's testimonials, case studies and reviews are and tells you what to refresh. Proof Meeting Prep (/proof-meeting-prep) reads every person in a sales call and hands back the one proof angle that lands for each. Both use only built-in web search + fetch — no API keys, no server, no login.",
+      "source": "./plugins/growthnation"
+    }
+  ]
+}
