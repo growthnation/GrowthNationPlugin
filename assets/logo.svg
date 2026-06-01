@@ -1,18 +1,26 @@
-<svg width="320" height="64" viewBox="0 0 320 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GrowthNation">
+<svg width="340" height="64" viewBox="0 0 340 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GrowthNation">
   <style>
-    .tile { fill: #1A1A1A; }
-    .wm   { fill: #1A1A1A; }
-    .sub  { fill: #6B6B6B; }
+    .wm  { fill: #2B2039; }
+    .sub { fill: #6B6B6B; }
     @media (prefers-color-scheme: dark) {
-      .tile { fill: #262626; }
-      .wm   { fill: #EDEDED; }
-      .sub  { fill: #9A9A9A; }
+      .wm  { fill: #EDEDED; }
+      .sub { fill: #9A9A9A; }
     }
   </style>
-  <g transform="translate(8 8)">
-    <rect class="tile" width="48" height="48" rx="12"/>
-    <path d="M13 33 L21 25 L27 31 L36 17" fill="none" stroke="#22C55E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-    <circle cx="36" cy="17" r="3.5" fill="#22C55E"/>
+  <g transform="translate(8 8) scale(2)">
+    <path d="M12.0026 23.9999C18.6299 23.9999 24.0024 18.6273 24.0024 12C24.0024 5.37265 18.6299 0.00012207 12.0026 0.00012207C5.37521 0.00012207 0.00268555 5.37265 0.00268555 12C0.00268555 18.6273 5.37521 23.9999 12.0026 23.9999Z" fill="#8D72CD"/>
+    <mask id="m0" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="25" height="25">
+      <path d="M12.0084 23.9996C18.6358 23.9996 24.0083 18.627 24.0083 11.9997C24.0083 5.37234 18.6358 -0.000183105 12.0084 -0.000183105C5.38107 -0.000183105 0.00854492 5.37234 0.00854492 11.9997C0.00854492 18.627 5.38107 23.9996 12.0084 23.9996Z" fill="white"/>
+    </mask>
+    <g mask="url(#m0)">
+      <path d="M13.2206 6.82254H12.972C11.6371 6.82254 10.5549 7.90472 10.5549 9.23966V11.1854C10.5549 12.5203 11.6371 13.6025 12.972 13.6025H13.2206C14.5556 13.6025 15.6377 12.5203 15.6377 11.1854V9.23966C15.6377 7.90472 14.5556 6.82254 13.2206 6.82254Z" fill="white"/>
+    </g>
+    <mask id="m1" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="-1" width="25" height="25">
+      <path d="M12.0084 23.9996C18.6358 23.9996 24.0083 18.627 24.0083 11.9997C24.0083 5.37234 18.6358 -0.000183105 12.0084 -0.000183105C5.38107 -0.000183105 0.00854492 5.37234 0.00854492 11.9997C0.00854492 18.627 5.38107 23.9996 12.0084 23.9996Z" fill="white"/>
+    </mask>
+    <g mask="url(#m1)">
+      <path d="M20.0528 7.31934H19.8556C18.7763 7.31934 17.9014 8.19429 17.9014 9.2736V10.8422C17.9014 11.9215 18.7763 12.7964 19.8556 12.7964H20.0528C21.1321 12.7964 22.007 11.9215 22.007 10.8422V9.2736C22.007 8.19429 21.1321 7.31934 20.0528 7.31934Z" fill="white"/>
+    </g>
   </g>
   <text class="wm" x="68" y="33" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="22" font-weight="700">GrowthNation</text>
   <text class="sub" x="69" y="50" font-family="-apple-system, Segoe UI, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" letter-spacing="0.5">Proof Audit · Proof Meeting Prep</text>
