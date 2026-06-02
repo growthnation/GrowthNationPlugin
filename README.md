@@ -50,10 +50,10 @@ Then use `/proof-audit`, `/proof-meeting-prep`, `/proof-email`, `/proof-dm`, and
 
 ### Claude Chat Desktop
 
-The whole plugin installs as a single ZIP (all five skills in one):
+Install from the repo URL — all five skills come with it (don't upload a ZIP; the `+` takes a URL):
 
-1. Download the [GrowthNation plugin ZIP](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/growthnation-plugin.zip).
-2. In the app: `Customize` > `Personal plugins` > click the `+`, then add the plugin ZIP. All five skills install together.
+1. `Customize` > `Personal plugins` > click the `+`.
+2. Paste the plugin URL: `https://github.com/growthnation/GrowthNationPlugin` and confirm. All five skills install together.
 3. Enable web access: `Profile` (bottom left) > `Settings` > `Capabilities` > `Code execution and file creation` > turn on `Allow network egress`, then set `Domain allowlist` to `All domains`.
 
 ### Other Agents (Codex / Cursor / etc.)
