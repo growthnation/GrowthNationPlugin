@@ -24,6 +24,21 @@ jobs:
           cd plugins/growthnation/skills/proof-meeting-prep
           zip -r "$GITHUB_WORKSPACE/proof-meeting-prep-skill.zip" SKILL.md
 
+      - name: Build proof-email-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-email
+          zip -r "$GITHUB_WORKSPACE/proof-email-skill.zip" SKILL.md
+
+      - name: Build proof-dm-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-dm
+          zip -r "$GITHUB_WORKSPACE/proof-dm-skill.zip" SKILL.md
+
+      - name: Build proof-post-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-post
+          zip -r "$GITHUB_WORKSPACE/proof-post-skill.zip" SKILL.md
+
       - name: Move "latest" tag to current commit
         run: |
           git tag -f latest
@@ -38,5 +53,8 @@ jobs:
           files: |
             proof-audit-skill.zip
             proof-meeting-prep-skill.zip
+            proof-email-skill.zip
+            proof-dm-skill.zip
+            proof-post-skill.zip
           prerelease: false
           make_latest: "true"
