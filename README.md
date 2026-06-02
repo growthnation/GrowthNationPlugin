@@ -50,10 +50,10 @@ Then use `/proof-audit`, `/proof-meeting-prep`, `/proof-email`, `/proof-dm`, and
 
 ### Claude Chat Desktop
 
-Each skill installs as its own ZIP:
+The whole plugin installs as a single ZIP (all five skills in one):
 
-1. Download the ZIP for each skill you want: [Proof Audit](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/proof-audit-skill.zip) · [Proof Meeting Prep](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/proof-meeting-prep-skill.zip) · [Proof Email](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/proof-email-skill.zip) · [Proof DM](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/proof-dm-skill.zip) · [Proof Post](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/proof-post-skill.zip)
-2. In the app: `Customize` > `Skills` > `+` > `Create Skill` > `Upload a skill` (repeat per ZIP)
+1. Download the [GrowthNation plugin ZIP](https://github.com/growthnation/GrowthNationPlugin/releases/download/latest/growthnation-plugin.zip).
+2. In the app: `Customize` > `Personal plugins` > click the `+`, then add the plugin ZIP. All five skills install together.
 3. Enable web access: `Profile` (bottom left) > `Settings` > `Capabilities` > `Code execution and file creation` > turn on `Allow network egress`, then set `Domain allowlist` to `All domains`.
 
 ### Other Agents (Codex / Cursor / etc.)

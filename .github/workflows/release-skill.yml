@@ -1,4 +1,4 @@
-name: Release skill zips
+name: Release plugin zip
 
 on:
   push:
@@ -14,30 +14,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build proof-audit-skill.zip
+      - name: Build growthnation-plugin.zip (whole plugin)
         run: |
-          cd plugins/growthnation/skills/proof-audit
-          zip -r "$GITHUB_WORKSPACE/proof-audit-skill.zip" SKILL.md
-
-      - name: Build proof-meeting-prep-skill.zip
-        run: |
-          cd plugins/growthnation/skills/proof-meeting-prep
-          zip -r "$GITHUB_WORKSPACE/proof-meeting-prep-skill.zip" SKILL.md
-
-      - name: Build proof-email-skill.zip
-        run: |
-          cd plugins/growthnation/skills/proof-email
-          zip -r "$GITHUB_WORKSPACE/proof-email-skill.zip" SKILL.md
-
-      - name: Build proof-dm-skill.zip
-        run: |
-          cd plugins/growthnation/skills/proof-dm
-          zip -r "$GITHUB_WORKSPACE/proof-dm-skill.zip" SKILL.md
-
-      - name: Build proof-post-skill.zip
-        run: |
-          cd plugins/growthnation/skills/proof-post
-          zip -r "$GITHUB_WORKSPACE/proof-post-skill.zip" SKILL.md
+          # One zip of the entire plugin — .claude-plugin/plugin.json, .mcp.json,
+          # and every skill folder — so Claude Desktop validates it as a plugin
+          # instead of a bare skill. Zipping from inside the plugin dir keeps the
+          # plugin structure (.claude-plugin/ etc.) at the archive root.
+          cd plugins/growthnation
+          zip -r "$GITHUB_WORKSPACE/growthnation-plugin.zip" . -x '*.DS_Store'
 
       - name: Move "latest" tag to current commit
         run: |
@@ -49,12 +33,8 @@ jobs:
         with:
           tag_name: latest
           target_commitish: ${{ github.sha }}
-          name: Download latest skill zips
+          name: Download latest plugin zip
           files: |
-            proof-audit-skill.zip
-            proof-meeting-prep-skill.zip
-            proof-email-skill.zip
-            proof-dm-skill.zip
-            proof-post-skill.zip
+            growthnation-plugin.zip
           prerelease: false
           make_latest: "true"
