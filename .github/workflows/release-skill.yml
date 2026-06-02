@@ -1,4 +1,9 @@
-name: Release plugin zip
+name: Release skill zips
+
+# Primary install is the marketplace URL (Customize > Plugins > Personal > + >
+# Add marketplace > growthnation/GrowthNationPlugin). These per-skill zips are a
+# convenience for agents that take a single SKILL.md upload (e.g. Claude Chat's
+# "Skills > Create Skill > Upload a skill").
 
 on:
   push:
@@ -14,15 +19,30 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Build growthnation-plugin.zip (whole marketplace)
+      - name: Build proof-audit-skill.zip
         run: |
-          # Zip the whole MARKETPLACE — the repo root's .claude-plugin/marketplace.json
-          # plus plugins/growthnation/ (plugin.json, .mcp.json, every skill). Claude
-          # Desktop's "Personal plugins → +" import is marketplace-based, so the
-          # archive root must hold marketplace.json + plugins/, not a bare plugin.
-          zip -r "$GITHUB_WORKSPACE/growthnation-plugin.zip" \
-            .claude-plugin plugins README.md LICENSE assets \
-            -x '*.DS_Store' '*/.git/*'
+          cd plugins/growthnation/skills/proof-audit
+          zip -r "$GITHUB_WORKSPACE/proof-audit-skill.zip" SKILL.md
+
+      - name: Build proof-meeting-prep-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-meeting-prep
+          zip -r "$GITHUB_WORKSPACE/proof-meeting-prep-skill.zip" SKILL.md
+
+      - name: Build proof-email-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-email
+          zip -r "$GITHUB_WORKSPACE/proof-email-skill.zip" SKILL.md
+
+      - name: Build proof-dm-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-dm
+          zip -r "$GITHUB_WORKSPACE/proof-dm-skill.zip" SKILL.md
+
+      - name: Build proof-post-skill.zip
+        run: |
+          cd plugins/growthnation/skills/proof-post
+          zip -r "$GITHUB_WORKSPACE/proof-post-skill.zip" SKILL.md
 
       - name: Move "latest" tag to current commit
         run: |
@@ -34,8 +54,12 @@ jobs:
         with:
           tag_name: latest
           target_commitish: ${{ github.sha }}
-          name: Download latest plugin zip
+          name: Download latest skill zips
           files: |
-            growthnation-plugin.zip
+            proof-audit-skill.zip
+            proof-meeting-prep-skill.zip
+            proof-email-skill.zip
+            proof-dm-skill.zip
+            proof-post-skill.zip
           prerelease: false
           make_latest: "true"
