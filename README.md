@@ -50,10 +50,10 @@ Then use `/proof-audit`, `/proof-meeting-prep`, `/proof-email`, `/proof-dm`, and
 
 ### Claude Chat Desktop
 
-Install from the repo URL — all five skills come with it (don't upload a ZIP; the `+` takes a URL):
+Install from the repo URL — all five skills come with it. Use **Add marketplace**, not "Upload plugin" (a ZIP upload fails validation; the marketplace import is the supported path).
 
-1. `Customize` > `Personal plugins` > click the `+`.
-2. Paste the plugin URL: `https://github.com/growthnation/GrowthNationPlugin` and confirm. All five skills install together.
+1. `Customize` > `Plugins` > `Personal` > click the `+` > **`Add marketplace`**.
+2. In **URL**, paste `growthnation/GrowthNationPlugin` (or the full `https://github.com/growthnation/GrowthNationPlugin`) and click **`Sync`**. All five skills install together — you'll see "Growthnation is installed and ready to use."
 3. Enable web access: `Profile` (bottom left) > `Settings` > `Capabilities` > `Code execution and file creation` > turn on `Allow network egress`, then set `Domain allowlist` to `All domains`.
 
 ### Other Agents (Codex / Cursor / etc.)
