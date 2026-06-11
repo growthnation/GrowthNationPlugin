@@ -13,7 +13,7 @@ Five self-contained social-proof skills for B2B sales, with the GrowthNation MCP
 ## Install
 
 ```bash
-openclaw plugins install clawhub:@growthnation/proof-skills
+openclaw plugins install clawhub:@growthnation/plugin
 ```
 
 ## Standalone by default
