@@ -1,0 +1,14 @@
+{
+  "name": "@growthnation/proof-skills",
+  "version": "1.0.1",
+  "type": "module",
+  "description": "Five self-contained social-proof skills for B2B sales (Proof Audit, Meeting Prep, Email, DM, Post), with the GrowthNation MCP connector bundled in.",
+  "license": "MIT",
+  "homepage": "https://growthnation.ai/agents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/growthnation/GrowthNationPlugin.git",
+    "directory": "plugins/growthnation"
+  },
+  "private": false
+}
