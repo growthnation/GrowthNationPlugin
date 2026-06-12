@@ -26,6 +26,8 @@ Five self-contained social-proof skills for B2B sales, in one plugin:
 
 **Standalone by default:** every skill runs on the agent's built-in **web search + fetch** — no API keys, no database, no CRM, no login, so anyone can install and run them. If the GrowthNation MCP connector is also installed and you're signed in, the writing skills pull your **real customer proof** for context (via the free `prepare_*` tools) and then write the copy, falling back to web otherwise (see [Optional: the GrowthNation connector](#optional-the-growthnation-connector)).
 
+**Using ChatGPT instead of Claude?** The skills are Claude/OpenClaw-format, but the GrowthNation MCP works in ChatGPT as an app — see [ChatGPT](#chatgpt) below.
+
 ---
 
 ## Install
@@ -55,6 +57,16 @@ Install from the repo URL — all five skills come with it. Use **Add marketplac
 1. `Customize` > `Plugins` > `Personal` > click the `+` > **`Add marketplace`**.
 2. In **URL**, paste `growthnation/GrowthNationPlugin` (or the full `https://github.com/growthnation/GrowthNationPlugin`) and click **`Sync`**. All five skills install together — you'll see "Growthnation is installed and ready to use."
 3. Enable web access: `Profile` (bottom left) > `Settings` > `Capabilities` > `Code execution and file creation` > turn on `Allow network egress`, then set `Domain allowlist` to `All domains`.
+
+### ChatGPT
+
+ChatGPT doesn't load skills from this repo — it connects straight to the GrowthNation MCP server as a **ChatGPT app**, with Sparks and your proof library rendered as cards in the conversation:
+
+1. In ChatGPT: `Settings` > `Apps & Connectors` > enable `Developer mode` (under Advanced settings).
+2. `Create` a connector with the server URL `https://app.growthnation.ai/mcp`.
+3. Sign in when prompted (OAuth) — then ask for your sparks, testimonials, or a proof-grounded email draft right in the chat.
+
+Once the GrowthNation app is published in the ChatGPT app directory, searching "GrowthNation" in ChatGPT will replace steps 1–2.
 
 ### Other Agents (Codex / Cursor / etc.)
 
