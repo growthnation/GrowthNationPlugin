@@ -7,8 +7,8 @@
   "plugins": [
     {
       "name": "growthnation",
-      "version": "1.0.0",
-      "description": "Five self-contained social-proof skills for B2B sales. Proof Audit (/proof-audit) scores how fresh a company's testimonials, case studies and reviews are and tells you what to refresh. Proof Meeting Prep (/proof-meeting-prep) reads every person in a sales call and hands back the one proof angle that lands for each. Proof Email (/proof-email), Proof DM (/proof-dm) and Proof Post (/proof-post) write a ready-to-send sales email, LinkedIn DM, or LinkedIn post grounded in real customer proof and one influence principle. All use only built-in web search + fetch — no API keys, no server, no login — and ground in your real GrowthNation customer proof via MCP when connected.",
+      "version": "2.0.0",
+      "description": "The GrowthNation MCP connector — plug your agent into your company's Agentic Transformation OS. Sign in once (OAuth) and your agent gets your department's AI skill library as tools (generated from voice interviews with your team, security-audited, versioned, feedback-improving) plus your company's connected tools — Google Workspace, Slack, Notion, GitHub, Asana, Apollo, Fireflies, Fathom, Granola and more — through one gateway. Built-in: start-interview, department-audit, create-skill, report-feedback. No API keys — just sign in.",
       "source": "./plugins/growthnation"
     }
   ]

@@ -1,5 +1,5 @@
 {
   "name": "@growthnation/plugin",
   "displayName": "GrowthNation",
-  "description": "Five self-contained social-proof skills for B2B sales: Proof Audit, Proof Meeting Prep, Proof Email, Proof DM and Proof Post. Run standalone on web search + fetch; ground in your real GrowthNation customer proof via the bundled MCP connector when signed in."
+  "description": "The GrowthNation MCP connector — your company's Agentic Transformation OS on any agent. Sign in once (OAuth) and get your department's interview-grounded AI skill library as tools, your company's connected tools (Google Workspace, Slack, Notion, GitHub, Asana and more) through one gateway, plus start-interview, department-audit, create-skill and report-feedback. No API keys — just sign in."
 }

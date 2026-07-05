@@ -1,10 +1,10 @@
 {
   "name": "@growthnation/plugin",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "type": "module",
-  "description": "Five self-contained social-proof skills for B2B sales (Proof Audit, Meeting Prep, Email, DM, Post), with the GrowthNation MCP connector bundled in.",
+  "description": "The GrowthNation MCP connector — your company's interview-grounded AI skill library and connected tools, served to any agent through one gateway.",
   "license": "MIT",
-  "homepage": "https://growthnation.ai/agents",
+  "homepage": "https://growthnation.ai",
   "repository": {
     "type": "git",
     "url": "https://github.com/growthnation/GrowthNationPlugin.git",
