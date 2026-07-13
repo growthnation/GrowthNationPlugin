@@ -1,6 +1,7 @@
 ![GrowthNation](assets/logo.svg)
 
 [![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups)
+[![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/LICENSE-MIT-5555ff?style=for-the-badge)](https://e2b.dev/startups)
 
 # GrowthNation — MCP connector for AI agents
 
@@ -11,8 +12,6 @@ GrowthNation interviews your whole team by voice, turns what they actually do in
 per-department **AI agent skills** (security-audited, quality-scored, versioned), and
 serves them — together with your company's connected tools — through a single MCP
 server. This plugin is the door: `https://app.growthnation.ai/mcp`, OAuth, no API keys.
-
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
 ---
 
