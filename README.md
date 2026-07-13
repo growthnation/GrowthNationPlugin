@@ -1,7 +1,7 @@
 ![GrowthNation](assets/logo.svg)
 
 [![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/SPONSORED%20BY-E2B%20FOR%20STARTUPS-ff8800?style=for-the-badge)](https://e2b.dev/startups)
-[![SPONSORED BY E2B FOR STARTUPS](https://img.shields.io/badge/LICENSE-MIT-5555ff?style=for-the-badge)](https://e2b.dev/startups)
+![License MIT](https://img.shields.io/badge/LICENSE-MIT-5555ff?style=for-the-badge)
 
 # GrowthNation — MCP connector for AI agents
 
